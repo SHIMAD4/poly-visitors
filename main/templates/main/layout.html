@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <aside class="w-[235px] h-screen flex flex-col shrink-0 items-center justify-between mr-[20px]">
+        <div class="flex flex-col items-center justify-between px-[15px] py-[20px]">
+            <a href="{% url 'home' %}"><img class="logo mb-[20px]" src="https://e.mospolytech.ru/assets/logo-4d9aa449.png" alt="logo" width="165"></a>
+                {% if not user.is_authenticated %}
+                    <a class="btn px-[50px] py-[10px] mb-[10px]" href="{% url 'login' %}">Войти</a>
+                {% else %}
+                    <a class="link pointer w-[220px] flex flex-col justify-center items-center" href="../users">
+                        <div class="w-[70px] h-[70px] rounded-full bg-[white]"></div>
+                        <p class="name text-center text-[0.9em] font-bold mt-[10px] leading-4">{{ user.first_name }} {{ user.last_name }}</p>
+                    </a>
+                {% endif %}
+            <ul class="flex flex-col gap-[30px] mt-[33px] text-[16px] font-bold self-start">
+                <!-- {% if 'Комендант' in user.groups.all %}
+                    <li><a class="link" href="/">Привет</a></li>
+                {% endif %} -->
+                <li><a class="link" href="../">Главная</a></li>
+                <li><a class="link" href="../">Настройки</a></li>
+                <li><a class="link" href="../">Все разделы</a></li>
+            </ul>
+        </div>
+        <button class="theme-btn btn py-[10px] px-[55px] mb-[10px] whitespace-nowrap">Светлая тема</button>
+    </aside>
+    <main class="p-3 ml-[235px] overflow-hidden">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <script type="text/javascript" src="{% static 'main/js/theme.js' %}"></script>
+</body>
+</html>

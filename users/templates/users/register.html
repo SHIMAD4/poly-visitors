@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Страница регистрации {% endblock %}
+
+{% block content %}
+    <h2 class="text-[24px]">Страница регистрации</h2>
+
+    <div class="h-[90vh] flex flex-col justify-center items-center">
+        {% if form.errors %}
+            <p>{{ form.errors.error }}</p>
+        {% endif %}
+        <form class="flex flex-col" action="register" method="post">
+            {{ form.username }}
+            {{ form.email }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+            {% csrf_token %}
+            <button class="btn py-[10px] px-[55px] mb-[10px] whitespace-nowrap" type="submit">Зарегистрироваться </button>
+        </form>
+    </div>
+{% endblock %}

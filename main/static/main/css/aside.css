@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url(./variables.css);
+
+aside {
+    float: left;
+    background-color: var(--bg-aside);
+    border-top-right-radius: var(--rounded);
+    border-bottom-right-radius: var(--rounded);
+    box-shadow: var(--bs-box-shadow);
+}
+
+.logo {
+    filter: invert(var(--invert));
+}
+
+.link {
+    padding: 20px;
+}
+
+.link:hover {
+    background-color: var(--hover);
+    border-radius: var(--rounded);
+}
+.link:active {
+    color: var(--active-link);
+}
+
+.name {
+    color: var(--text-clr);
+}
+
+.btn {
+    color: var(--text-clr);
+}
+.btn:hover {
+    background-color: var(--hover);
+    border-radius: calc(var(--rounded) - 6px);
+}

@@ -1,0 +1,23 @@
+:root {
+    --bs-box-shadow: 0 0 32px rgb(0 0 0 / 8%);
+    --rounded: 19px;
+    --active-link: #90b3e7;
+}
+
+html[data-bs-theme="light"] {
+    --bg-aside: white;
+    --bg-main: white;
+    --text-clr: #272727;
+    --hover: #f5f5f5;
+    --active:#dddddd;
+    --invert: 1;
+}
+html[data-bs-theme=dark] {
+    color-scheme: dark;
+    --bg-aside: #2e2e2e;
+    --bg-main: #3a3a3a;
+    --text-clr: white;
+    --hover: #363636;
+    --active: #222222;
+    --invert: 0;
+}
