@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = "django-insecure-tz6*%)e)v)q@sk2+&#am$@x_+blep%(jxnbq$3_b6i$!)0c8al
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'poly-visitors.std-2123.ist.mospolytech.ru/']
 
 AUTH_USER_MODEL = "users.User"
 LOGIN_REDIRECT_URL = "/"
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -117,12 +119,14 @@ USE_I18N = True
 USE_TZ = True
 
 
+# mimetypes.add_type("text/css", ".css", True)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "main/static/"
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "main/static",
+    '/Users/6asm6/Desktop/poly-visitors/main/static'
 ]
 
 # Default primary key field type

@@ -2,7 +2,6 @@ from django.contrib import admin
 
 from .models import Dormitory, Statement, VisitHistory
 
-
 # Register your models here.
 
 

@@ -36,7 +36,7 @@ class Dormitory(models.Model):
 
 
 class VisitHistory(models.Model):
-    statement = models.OneToOneField(Statement, on_delete=models.CASCADE)
+    statement = models.OneToOneField(Statement, on_delete=models.SET_NULL, null=True)
     day_of_visit = models.DateField(verbose_name="Дата посещения")
 
     def __str__(self):
