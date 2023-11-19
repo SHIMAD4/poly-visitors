@@ -13,7 +13,7 @@ class Students(models.Model):
     room = models.CharField("Комната", max_length=40, default="")
 
     def __str__(self):
-        return self.first_name
+        return f"{self.first_name} {self.last_name}"
 
     class Meta:
         verbose_name = "Студенты"
@@ -26,7 +26,7 @@ class Commandants(models.Model):
     group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
+        return f"{self.first_name} {self.last_name}"
 
     class Meta:
         verbose_name = "Комендант"
