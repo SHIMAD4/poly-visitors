@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import viewsets
 
 from .models import Statement, Dormitory
 from .serializers import StatementSerializer, DormitorySerializer
@@ -18,11 +18,11 @@ def statement_home(request):
     return render(request, "main/statements.html", {"statements": statements})
 
 
-class StatementApiView(generics.ListAPIView):
+class StatementViewSet(viewsets.ModelViewSet):
     queryset = Statement.objects.all()
     serializer_class = StatementSerializer
 
 
-class DormitoryApiView(generics.ListAPIView):
+class DormitoryViewSet(viewsets.ModelViewSet):
     queryset = Dormitory.objects.all()
     serializer_class = DormitorySerializer
