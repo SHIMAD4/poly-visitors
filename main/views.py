@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 from .models import Statement, Dormitory
 from .serializers import StatementSerializer, DormitorySerializer
@@ -26,3 +28,8 @@ class StatementViewSet(viewsets.ModelViewSet):
 class DormitoryViewSet(viewsets.ModelViewSet):
     queryset = Dormitory.objects.all()
     serializer_class = DormitorySerializer
+
+    @action(methods=["GET"], detail=False)
+    def street(self, request):
+        streets = Dormitory.objects.all()
+        return Response({'street': [s.street for s in streets]})
