@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 
 from .models import Statement, Dormitory
@@ -20,9 +21,16 @@ def statement_home(request):
     return render(request, "main/statements.html", {"statements": statements})
 
 
+class StatementAPIListPagination(PageNumberPagination):
+    page_size = 4
+    page_size_query_param = 'page_size'
+    max_page_size = 10000
+
+
 class StatementViewSet(viewsets.ModelViewSet):
     queryset = Statement.objects.all()
     serializer_class = StatementSerializer
+    pagination_class = StatementAPIListPagination
 
 
 class DormitoryViewSet(viewsets.ModelViewSet):
