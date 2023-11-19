@@ -6,10 +6,10 @@ from main.models import Statement, Dormitory
 class StatementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Statement
-        fields = ('title', 'payment', 'status', 'date', 'file', 'student')
+        fields = '__all__'
 
 
 class DormitorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Dormitory
-        fields = ('title', 'street', 'student', 'commandant')
+        fields = '__all__'
