@@ -1,11 +1,11 @@
 from django.contrib import admin
 
 from .models import Dormitory, Statement, VisitHistory
-
+from import_export.admin import ExportActionMixin
 # Register your models here.
 
 
-class AdminStatement(admin.ModelAdmin):
+class AdminStatement(ExportActionMixin, admin.ModelAdmin):
     def display_students(self, obj):
         return ", ".join([f"{student.last_name} {student.first_name}" for student in obj.student.all()])
 
@@ -16,13 +16,13 @@ class AdminStatement(admin.ModelAdmin):
     search_fields = ["title", "status"]
 
 
-class AdminVisitHistory(admin.ModelAdmin):
+class AdminVisitHistory(ExportActionMixin, admin.ModelAdmin):
     list_display = ("statement", "day_of_visit")
     search_fields = ["statement"]
     list_filter = ("day_of_visit",)
 
 
-class AdminDormitory(admin.ModelAdmin):
+class AdminDormitory(ExportActionMixin, admin.ModelAdmin):
     def display_students(self, obj):
         return ", ".join([f"{student.last_name} {student.first_name}" for student in obj.student.all()])
 
