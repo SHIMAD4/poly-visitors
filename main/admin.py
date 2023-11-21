@@ -1,7 +1,7 @@
 from django.contrib import admin
+from import_export.admin import ExportActionMixin
 
 from .models import Dormitory, Statement, VisitHistory
-from import_export.admin import ExportActionMixin
 # Register your models here.
 
 
