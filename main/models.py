@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from simple_history.models import HistoricalRecords
 
 from users.models import Commandants, Students
 
@@ -12,6 +13,7 @@ class Statement(models.Model):
     date = models.DateField("Дата отправки", default=timezone.now())
     file = models.FileField("Файл заявления", upload_to="main/static/main/files", blank=True, null=True)
     student = models.ManyToManyField(Students)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -26,6 +28,7 @@ class Dormitory(models.Model):
     street = models.CharField("Адрес", max_length=250)
     student = models.ManyToManyField(Students)
     commandant = models.ManyToManyField(Commandants)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -38,6 +41,7 @@ class Dormitory(models.Model):
 class VisitHistory(models.Model):
     statement = models.OneToOneField(Statement, on_delete=models.SET_NULL, null=True)
     day_of_visit = models.DateField(verbose_name="Дата посещения")
+    history = HistoricalRecords()
 
     def __str__(self):
         return f"{self.statement.title} - {self.day_of_visit}"
