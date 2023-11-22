@@ -22,9 +22,8 @@
                     </a>
                 {% endif %}
             <ul class="flex flex-col gap-[30px] mt-[33px] text-[16px] font-bold self-start">
-                <!-- {% if 'Комендант' in user.groups.all %}
-                    <li><a class="link" href="/">Привет</a></li>
-                {% endif %} -->
+                {% if 'Комендант' in user.groups.all %}
+                {% endif %}
                 <li><a class="link" href="../">Главная</a></li>
                 <li><a class="link" href="../">Настройки</a></li>
                 <li><a class="link" href="../">Все разделы</a></li>
@@ -36,6 +35,8 @@
         {% block content %}
         {% endblock %}
     </main>
+    {% block script %}
+    {% endblock %}
     <script type="text/javascript" src="{% static 'main/js/theme.js' %}"></script>
 </body>
 </html>

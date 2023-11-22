@@ -1,48 +1,12 @@
 {% extends 'main/layout.html' %}
-
-{% block title %} Страница заявлений {% endblock %}
+{% load static %}
 
 {% block content %}
     <h2 class="text-[24px]">Страница заявлений</h2>
+    <div class="statement-container"></div>
+    <div class="pagination-container"></div>
+{% endblock %}
 
-    {% for el in statements %}
-        <ul class="elem w-full h-[60px] flex justify-center items-center text-center hover:bg-none mt-[20px] rounded-[19px]">
-            <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a]">{{ el.title }}</li>
-            {% if el.payment == False %}
-                <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a]">
-                    <span class="bg-[#d41c1c] px-[20px] py-[7px] rounded-[10px] font-bold">Не оплачено</span>
-                </li>
-            {% else %}
-                <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a] text-[#272727]">
-                    <span class="bg-[#69d92e] px-[20px] py-[7px] rounded-[10px] font-bold">Оплачено</span>
-                </li>
-            {% endif %}
-            {% if el.status == 'Отправлено' or el.status == 'Принято в работу' %}
-                <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a] text-[#272727]">
-                    <span class="bg-[#d3eb1e] px-[20px] py-[7px] rounded-[10px] font-bold">{{ el.status }}</span>
-                </li>
-            {% endif %}
-            {% if el.status == 'Готово' %}
-                <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a] text-[#272727]">
-                    <span class="bg-[#69d92e] px-[20px] py-[7px] rounded-[10px] font-bold">{{ el.status }}</span>
-                </li>
-            {% endif %}
-            {% if el.status == 'Отклонено' %}
-                <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a]">
-                    <span class="bg-[#d41c1c] px-[20px] py-[7px] rounded-[10px] font-bold">{{ el.status }}</span>
-                </li>
-            {% endif %}
-            <li class="flex justify-center items-center w-[25%] h-full border-r-[1px] border-[#3a3a3a]">{{ el.date }}</li>
-            {% if el.file %}
-                <li class="flex justify-center items-center w-[25%] h-full cursor-pointer">
-                    <a class="w-full h-full cursor-pointer flex justify-center items-center" href="{{ el.file.url }}" target="_blank">Скачать PDF</a>
-                </li>
-            {% endif %}
-                {% if not el.file %}
-                <li class="flex justify-center items-center w-[25%] h-full cursor-default">
-                    <p class="w-full h-full flex justify-center items-center cursor-default">Нет файла</p>
-                </li>
-            {% endif %}
-        </ul>
-    {% endfor %}
+{% block script %}
+    <script type="text/javascript" src="{% static 'main/js/statementsView.js' %}"></script>
 {% endblock %}
