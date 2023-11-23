@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from .models import Statement, Dormitory
@@ -28,7 +28,7 @@ class StatementViewSet(viewsets.ModelViewSet):
     queryset = Statement.objects.all()
     serializer_class = StatementSerializer
     pagination_class = StatementAPIListPagination
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = (IsAuthenticated,)
 
 
 class DormitoryViewSet(viewsets.ModelViewSet):
