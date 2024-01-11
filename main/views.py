@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -30,6 +31,18 @@ class StatementViewSet(viewsets.ModelViewSet):
     pagination_class = StatementAPIListPagination
     permission_classes = (IsAuthenticated,)
 
+    def get_queryset(self):
+        # Define the Q objects for the conditions
+        condition1 = Q(title__icontains='important') | Q(title__icontains='urgent')
+        condition2 = ~Q(content__icontains='draft')
+
+        # Combine the conditions using AND
+        combined_condition = condition1 & condition2
+
+        # Apply the filter to the queryset
+        queryset = Statement.objects.filter(combined_condition)
+        return queryset
+
 
 class DormitoryViewSet(viewsets.ModelViewSet):
     queryset = Dormitory.objects.all()
@@ -39,3 +52,15 @@ class DormitoryViewSet(viewsets.ModelViewSet):
     def street(self, request):
         streets = Dormitory.objects.all()
         return Response({'street': [s.street for s in streets]})
+
+    def get_queryset(self):
+        # Define the Q objects for the conditions
+        condition1 = Q(street='Main Street') | Q(street='Broad Street')
+        condition2 = Q(capacity__gt=50)
+
+        # Combine the conditions using AND
+        combined_condition = condition1 & condition2
+
+        # Apply the filter to the queryset
+        queryset = Dormitory.objects.filter(combined_condition)
+        return queryset
