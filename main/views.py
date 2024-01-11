@@ -53,6 +53,15 @@ class DormitoryViewSet(viewsets.ModelViewSet):
         streets = Dormitory.objects.all()
         return Response({'street': [s.street for s in streets]})
 
+    @action(methods=['POST'], detail=True)
+    def custom_action(self, request, pk=None):
+        dormitory = self.get_object()
+        new_description = request.data.get('new_description')
+        if new_description:
+            dormitory.description = new_description
+            dormitory.save()
+        return Response({'status': 'POST request handled for dormitory with id {}'.format(pk)})
+
     def get_queryset(self):
         # Define the Q objects for the conditions
         condition1 = Q(street='Main Street') | Q(street='Broad Street')
