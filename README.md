@@ -36,3 +36,9 @@
     `python manage.py loaddata users/fixtures/students.json`
 4. Коменданты <br/>
     `python manage.py loaddata users/fixtures/commandants.json`
+
+## Команды для PyLint
+Оценка кода: 10.00/10
+
+1. Запуск проверки <br/>
+    `pylint ./`
