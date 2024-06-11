@@ -1,0 +1,190 @@
+[
+{
+    "model": "main.dormitory",
+    "pk": 1,
+    "fields": {
+        "title": "Общежитие №1",
+        "street": "ул. Малая Семёновская, д. 12",
+        "student": [
+            4,
+            7,
+            9
+        ],
+        "commandant": [
+            2,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 2,
+    "fields": {
+        "title": "Общежитие №2",
+        "street": "ул. 7-я Парковая, д. 9/26",
+        "student": [
+            1,
+            5,
+            6,
+            8
+        ],
+        "commandant": [
+            6,
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 3,
+    "fields": {
+        "title": "Общежитие №3",
+        "street": "ул. 1-я Дубровская, д. 16А, стр. 2",
+        "student": [
+            3,
+            7,
+            9
+        ],
+        "commandant": [
+            7,
+            9,
+            11
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 4,
+    "fields": {
+        "title": "Общежитие №4",
+        "street": "ул. 800-летия Москвы, д. 28, к. 1",
+        "student": [
+            2,
+            7,
+            8
+        ],
+        "commandant": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 5,
+    "fields": {
+        "title": "Общежитие №5",
+        "street": "ул. Михалковская, д. 7, к. 3",
+        "student": [
+            2,
+            3,
+            7,
+            10
+        ],
+        "commandant": [
+            7,
+            10,
+            13
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 6,
+    "fields": {
+        "title": "Общежитие №6",
+        "street": "ул. Бориса Галушкина, д. 9",
+        "student": [
+            2,
+            5,
+            9
+        ],
+        "commandant": [
+            8,
+            11,
+            12
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 7,
+    "fields": {
+        "title": "Общежитие №7",
+        "street": "ул. Павла Корчагина, д. 20А, к. 3",
+        "student": [
+            3,
+            4,
+            8
+        ],
+        "commandant": [
+            1,
+            6,
+            13,
+            14
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 8,
+    "fields": {
+        "title": "Общежитие №8",
+        "street": "Рижский проезд, д. 15, к. 2",
+        "student": [
+            2,
+            3,
+            7,
+            9
+        ],
+        "commandant": [
+            2,
+            3,
+            4,
+            11,
+            12
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 9,
+    "fields": {
+        "title": "Общежитие №9",
+        "street": "Рижский проезд, д. 15, к. 1",
+        "student": [
+            5,
+            6,
+            8
+        ],
+        "commandant": [
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+},
+{
+    "model": "main.dormitory",
+    "pk": 10,
+    "fields": {
+        "title": "Общежитие №10",
+        "street": "1-й Балтийский переулок, д. 6/21, к. 3",
+        "student": [
+            1,
+            2
+        ],
+        "commandant": [
+            12,
+            13,
+            14,
+            15
+        ]
+    }
+}
+]

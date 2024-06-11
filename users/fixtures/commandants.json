@@ -1,0 +1,137 @@
+[
+{
+    "model": "users.commandants",
+    "pk": 1,
+    "fields": {
+        "first_name": "Татьяна",
+        "last_name": "Борисовна",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 2,
+    "fields": {
+        "first_name": "Евгения",
+        "last_name": "Юрьевна",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 3,
+    "fields": {
+        "first_name": "Татьяна",
+        "last_name": "Семёновна",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 4,
+    "fields": {
+        "first_name": "Татьяна",
+        "last_name": "Ивановна",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 5,
+    "fields": {
+        "first_name": "Анастасия",
+        "last_name": "Иванова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 6,
+    "fields": {
+        "first_name": "Екатерина",
+        "last_name": "Смирнова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 7,
+    "fields": {
+        "first_name": "Мария",
+        "last_name": "Кузнецова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 8,
+    "fields": {
+        "first_name": "Александра",
+        "last_name": "Петрова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 9,
+    "fields": {
+        "first_name": "Ольга",
+        "last_name": "Соколова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 10,
+    "fields": {
+        "first_name": "Наталья",
+        "last_name": "Михайлова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 11,
+    "fields": {
+        "first_name": "Светлана",
+        "last_name": "Новикова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 12,
+    "fields": {
+        "first_name": "Анна",
+        "last_name": "Лебедева",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 13,
+    "fields": {
+        "first_name": "Виктория",
+        "last_name": "Козлова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 14,
+    "fields": {
+        "first_name": "Елена",
+        "last_name": "Морозова",
+        "group": 2
+    }
+},
+{
+    "model": "users.commandants",
+    "pk": 15,
+    "fields": {
+        "first_name": "Ирина",
+        "last_name": "Волкова",
+        "group": 2
+    }
+}
+]

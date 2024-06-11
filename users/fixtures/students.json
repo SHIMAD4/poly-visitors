@@ -1,0 +1,92 @@
+[
+{
+    "model": "users.students",
+    "pk": 1,
+    "fields": {
+        "first_name": "Ева-София",
+        "last_name": "Мелихова",
+        "room": "181B"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 2,
+    "fields": {
+        "first_name": "Артём",
+        "last_name": "Хаметов",
+        "room": "109А"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 3,
+    "fields": {
+        "first_name": "Денис",
+        "last_name": "Яцыник",
+        "room": "59Б"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 4,
+    "fields": {
+        "first_name": "Даниил",
+        "last_name": "Шмаков",
+        "room": "12А"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 5,
+    "fields": {
+        "first_name": "Алена",
+        "last_name": "Милосердова",
+        "room": "182А"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 6,
+    "fields": {
+        "first_name": "Михаил",
+        "last_name": "Иванов",
+        "room": "179А"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 7,
+    "fields": {
+        "first_name": "Наталья",
+        "last_name": "Зайцева",
+        "room": "139Б"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 8,
+    "fields": {
+        "first_name": "Полина",
+        "last_name": "Белова",
+        "room": "68В"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 9,
+    "fields": {
+        "first_name": "Феликс",
+        "last_name": "Акопян",
+        "room": "113В"
+    }
+},
+{
+    "model": "users.students",
+    "pk": 10,
+    "fields": {
+        "first_name": "Старцев",
+        "last_name": "Виталий",
+        "room": "179Б"
+    }
+}
+]
