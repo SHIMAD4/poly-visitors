@@ -8,6 +8,7 @@ from rest_framework.response import Response
 
 from .models import Statement, Dormitory
 from .serializers import StatementSerializer, DormitorySerializer
+from datetime import date
 
 
 def index(request):
@@ -31,18 +32,6 @@ class StatementViewSet(viewsets.ModelViewSet):
     pagination_class = StatementAPIListPagination
     permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):
-        # Define the Q objects for the conditions
-        condition1 = Q(title__icontains='important') | Q(title__icontains='urgent')
-        condition2 = ~Q(content__icontains='draft')
-
-        # Combine the conditions using AND
-        combined_condition = condition1 & condition2
-
-        # Apply the filter to the queryset
-        queryset = Statement.objects.filter(combined_condition)
-        return queryset
-
 
 class DormitoryViewSet(viewsets.ModelViewSet):
     queryset = Dormitory.objects.all()
@@ -63,13 +52,10 @@ class DormitoryViewSet(viewsets.ModelViewSet):
         return Response({'status': 'POST request handled for dormitory with id {}'.format(pk)})
 
     def get_queryset(self):
-        # Define the Q objects for the conditions
         condition1 = Q(street='Main Street') | Q(street='Broad Street')
         condition2 = Q(capacity__gt=50)
 
-        # Combine the conditions using AND
         combined_condition = condition1 & condition2
 
-        # Apply the filter to the queryset
         queryset = Dormitory.objects.filter(combined_condition)
         return queryset
