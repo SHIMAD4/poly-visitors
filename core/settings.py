@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "import_export",
     "simple_history",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [

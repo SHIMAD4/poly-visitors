@@ -51,12 +51,3 @@ class DormitoryViewSet(viewsets.ModelViewSet):
         return Response(
             {'status': 'POST request handled for dormitory with id {}'.format(pk)}
         )
-
-    def get_queryset(self):
-        condition1 = Q(street='Main Street') | Q(street='Broad Street')
-        condition2 = Q(capacity__gt=50)
-
-        combined_condition = condition1 & condition2
-
-        queryset = Dormitory.objects.filter(combined_condition)
-        return queryset
