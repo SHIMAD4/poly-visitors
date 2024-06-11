@@ -1,10 +1,10 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm as BaseUserCreationForm
 
 User = get_user_model()
 
 
-class UserCreationForm(UserCreationForm):
+class UserCreationForm(BaseUserCreationForm):  # pylint: disable=function-redefined, too-many-ancestors
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].widget.attrs.update(
@@ -56,6 +56,6 @@ class UserCreationForm(UserCreationForm):
             }
         )
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(BaseUserCreationForm.Meta):
         model = User
         fields = ["username", "email", "password1", "password2"]

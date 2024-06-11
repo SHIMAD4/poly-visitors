@@ -8,19 +8,26 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0026_alter_statement_date_visithistory'),
+        ("main", "0026_alter_statement_date_visithistory"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='visithistory',
-            name='day_of_visit',
-            field=models.DateField(default=django.utils.timezone.now, verbose_name='Дата посещения'),
+            model_name="visithistory",
+            name="day_of_visit",
+            field=models.DateField(
+                default=django.utils.timezone.now, verbose_name="Дата посещения"
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='statement',
-            name='date',
-            field=models.DateField(default=datetime.datetime(2023, 9, 21, 22, 42, 37, 605657, tzinfo=datetime.timezone.utc), verbose_name='Дата отправки'),
+            model_name="statement",
+            name="date",
+            field=models.DateField(
+                default=datetime.datetime(
+                    2023, 9, 21, 22, 42, 37, 605657, tzinfo=datetime.timezone.utc
+                ),
+                verbose_name="Дата отправки",
+            ),
         ),
     ]

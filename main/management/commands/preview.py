@@ -3,7 +3,7 @@ from django.utils import timezone
 
 
 class Command(BaseCommand):
-    help = 'Displays a personalized greeting based on the current time'
+    help = "Displays a personalized greeting based on the current time"
 
     def handle(self, *args, **kwargs):
         current_time = timezone.now()
@@ -16,6 +16,6 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                "Good %s! It's now %s" % (time_of_day, current_time.strftime('%X'))
+                f"Good {time_of_day}! It's now {current_time.strftime('%X')}"
             )
         )

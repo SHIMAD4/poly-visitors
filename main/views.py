@@ -1,4 +1,3 @@
-from django.db.models import Q
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -21,33 +20,33 @@ def statement_home(request):
 
 class StatementAPIListPagination(PageNumberPagination):
     page_size = 4
-    page_size_query_param = 'page_size'
+    page_size_query_param = "page_size"
     max_page_size = 10000
 
 
-class StatementViewSet(viewsets.ModelViewSet):
+class StatementViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = Statement.objects.all()
     serializer_class = StatementSerializer
     pagination_class = StatementAPIListPagination
     permission_classes = (IsAuthenticated,)
 
 
-class DormitoryViewSet(viewsets.ModelViewSet):
+class DormitoryViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = Dormitory.objects.all()
     serializer_class = DormitorySerializer
 
     @action(methods=["GET"], detail=False)
     def street(self, request):
         streets = Dormitory.objects.all()
-        return Response({'street': [s.street for s in streets]})
+        return Response({"street": [s.street for s in streets]})
 
-    @action(methods=['POST'], detail=True)
+    @action(methods=["POST"], detail=True)
     def custom_action(self, request, pk=None):
         dormitory = self.get_object()
-        new_description = request.data.get('new_description')
+        new_description = request.data.get("new_description")
         if new_description:
             dormitory.description = new_description
             dormitory.save()
         return Response(
-            {'status': 'POST request handled for dormitory with id {}'.format(pk)}
+            {"status": f"POST request handled for dormitory with id {pk}"}
         )
