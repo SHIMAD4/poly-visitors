@@ -11,7 +11,12 @@ class Statement(models.Model):
     payment = models.BooleanField("Оплата общежития", default=False)
     status = models.CharField("Статус", max_length=30, default="Отправлено")
     date = models.DateField("Дата отправки", default=timezone.now)
-    file = models.FileField("Файл заявления", upload_to="main/static/main/files", blank=True, null=True)
+    file = models.FileField(
+        "Файл заявления",
+        upload_to="main/static/main/files",
+        blank=True,
+        null=True,
+    )
     student = models.ManyToManyField(Students)
     history = HistoricalRecords()
 

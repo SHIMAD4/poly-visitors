@@ -8,7 +8,6 @@ from rest_framework.response import Response
 
 from .models import Statement, Dormitory
 from .serializers import StatementSerializer, DormitorySerializer
-from datetime import date
 
 
 def index(request):
@@ -49,7 +48,9 @@ class DormitoryViewSet(viewsets.ModelViewSet):
         if new_description:
             dormitory.description = new_description
             dormitory.save()
-        return Response({'status': 'POST request handled for dormitory with id {}'.format(pk)})
+        return Response(
+            {'status': 'POST request handled for dormitory with id {}'.format(pk)}
+        )
 
     def get_queryset(self):
         condition1 = Q(street='Main Street') | Q(street='Broad Street')

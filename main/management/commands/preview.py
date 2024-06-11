@@ -7,6 +7,15 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         current_time = timezone.now()
-        time_of_day = "morning" if 5 <= current_time.hour < 12 else "afternoon" if 12 <= current_time.hour < 17 else "evening"
+        if 5 <= current_time.hour < 12:
+            time_of_day = "morning"
+        elif 12 <= current_time.hour < 17:
+            time_of_day = "afternoon"
+        else:
+            time_of_day = "evening"
 
-        self.stdout.write(self.style.SUCCESS("Good %s! It's now %s" % (time_of_day, current_time.strftime('%X'))))
+        self.stdout.write(
+            self.style.SUCCESS(
+                "Good %s! It's now %s" % (time_of_day, current_time.strftime('%X'))
+            )
+        )
