@@ -3,9 +3,10 @@
 Курсовой проект Python + Django
 
 ## Команды запуска
+Оценка кода по линтеру: 10.00/10
 
 1. Старт проекта `python manage.py runserver`
-2. Старт линтера `flake8 ./`
+2. Старт линтера `pylint ./`
 3. Создать миграции `python manage.py makemigrations`
 4. Применить миграции `python manage.py migrate`
 
@@ -36,9 +37,3 @@
     `python manage.py loaddata users/fixtures/students.json`
 4. Коменданты <br/>
     `python manage.py loaddata users/fixtures/commandants.json`
-
-## Команды для PyLint
-Оценка кода: 10.00/10
-
-1. Запуск проверки <br/>
-    `pylint ./`
