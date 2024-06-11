@@ -8,6 +8,9 @@
 2. Старт линтера `flake8 ./`
 3. Создать миграции `python manage.py makemigrations`
 4. Применить миграции `python manage.py migrate`
-5. Админ панель `/admin`
-6. Swagger `/swagger`
-7. Redoc `/redoc`
+
+## URL запуска
+
+1. Админ панель `/admin`
+2. Swagger `/swagger`
+3. Redoc `/redoc`
