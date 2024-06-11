@@ -18,21 +18,21 @@
 ## Команды для фикстур
 
 ### Для получения фикстур
-1. Заявления
+1. Заявления <br/>
     `python manage.py dumpdata main.Statement --format=json --indent=4 -o main/fixtures/statements.json`
-2. Общежития
+2. Общежития <br/>
     `python manage.py dumpdata main.Dormitory --format=json --indent=4 -o main/fixtures/dormitories.json`
-3. Студенты
+3. Студенты <br/>
     `python manage.py dumpdata users.Students --format=json --indent=4 -o users/fixtures/students.json`
-4. Коменданты
+4. Коменданты <br/>
     `python manage.py dumpdata users.Commandants --format=json --indent=4 -o users/fixtures/commandants.json`
 
 ### Для применения фикстур (Нужен формат UTF-8)
-1. Заявления
+1. Заявления <br/>
     `python manage.py loaddata main/fixtures/statements.json`
-2. Общежития
+2. Общежития <br/>
     `python manage.py loaddata main/fixtures/dormitories.json`
-3. Студенты
+3. Студенты <br/>
     `python manage.py loaddata users/fixtures/students.json`
-4. Коменданты
+4. Коменданты <br/>
     `python manage.py loaddata users/fixtures/commandants.json`
