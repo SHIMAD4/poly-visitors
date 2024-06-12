@@ -1,142 +1,122 @@
 [
-{
-    "model": "main.statement",
-    "pk": 2,
-    "fields": {
-        "title": "Переселение 1",
-        "payment": true,
-        "status": "Отправлено",
-        "date": "2023-06-28",
-        "file": "main/static/main/files/test_x0aG7Kx.pdf",
-        "student": [
-            10
-        ]
+    {
+        "model": "main.statement",
+        "pk": 1,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 1",
+            "payment": true,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-01",
+            "file": "main/static/main/files/test1.pdf",
+            "student": [1]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 2,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 2",
+            "payment": false,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-02",
+            "file": "main/static/main/files/test2.pdf",
+            "student": [2]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 3,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 3",
+            "payment": true,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-03",
+            "file": "main/static/main/files/test3.pdf",
+            "student": [3]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 4,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 4",
+            "payment": false,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-04",
+            "file": "main/static/main/files/test4.pdf",
+            "student": [4]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 5,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 5",
+            "payment": true,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-05",
+            "file": "main/static/main/files/test5.pdf",
+            "student": [5]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 6,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 6",
+            "payment": false,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-06",
+            "file": "main/static/main/files/test6.pdf",
+            "student": [6]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 7,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 7",
+            "payment": true,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-07",
+            "file": "main/static/main/files/test7.pdf",
+            "student": [7]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 8,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 8",
+            "payment": false,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-08",
+            "file": "main/static/main/files/test8.pdf",
+            "student": [8]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 9,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 9",
+            "payment": true,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-09",
+            "file": "main/static/main/files/test9.pdf",
+            "student": [9]
+        }
+    },
+    {
+        "model": "main.statement",
+        "pk": 10,
+        "fields": {
+            "title": "Р—Р°СЏРІР»РµРЅРёРµ 10",
+            "payment": false,
+            "status": "РћС‚РїСЂР°РІР»РµРЅРѕ",
+            "date": "2023-06-10",
+            "file": "main/static/main/files/test10.pdf",
+            "student": [10]
+        }
     }
-},
-{
-    "model": "main.statement",
-    "pk": 3,
-    "fields": {
-        "title": "Переселение 2",
-        "payment": true,
-        "status": "Принято в работу",
-        "date": "2023-06-28",
-        "file": "main/static/main/files/test_8KRaj6P.pdf",
-        "student": [
-            9
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 4,
-    "fields": {
-        "title": "Переселение 3",
-        "payment": true,
-        "status": "Готово",
-        "date": "2023-06-27",
-        "file": "main/static/main/files/test_cdXtGtJ.pdf",
-        "student": [
-            8
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 5,
-    "fields": {
-        "title": "Переселение 4",
-        "payment": true,
-        "status": "Отклонено",
-        "date": "2023-06-28",
-        "file": "",
-        "student": [
-            7
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 6,
-    "fields": {
-        "title": "Переселение 5",
-        "payment": false,
-        "status": "Отправлено",
-        "date": "2023-06-26",
-        "file": "",
-        "student": [
-            6
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 7,
-    "fields": {
-        "title": "Переселение 6",
-        "payment": true,
-        "status": "Готово",
-        "date": "2023-06-20",
-        "file": "main/static/main/files/test_sfDId7E.pdf",
-        "student": [
-            5
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 8,
-    "fields": {
-        "title": "Переселение 7",
-        "payment": false,
-        "status": "Отклонено",
-        "date": "2023-06-08",
-        "file": "",
-        "student": [
-            4
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 9,
-    "fields": {
-        "title": "Переселение 8",
-        "payment": true,
-        "status": "Готово",
-        "date": "2023-06-13",
-        "file": "main/static/main/files/test_wPloOOI.pdf",
-        "student": [
-            3
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 10,
-    "fields": {
-        "title": "Переселение 9",
-        "payment": true,
-        "status": "Принято в работу",
-        "date": "2023-06-28",
-        "file": "",
-        "student": [
-            2
-        ]
-    }
-},
-{
-    "model": "main.statement",
-    "pk": 11,
-    "fields": {
-        "title": "Переселение 10",
-        "payment": false,
-        "status": "Отправлено",
-        "date": "2023-06-28",
-        "file": "main/static/main/files/test_AYg5l3Y.pdf",
-        "student": [
-            1
-        ]
-    }
-}
 ]

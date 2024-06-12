@@ -3,8 +3,8 @@
     "model": "users.students",
     "pk": 1,
     "fields": {
-        "first_name": "Ева-София",
-        "last_name": "Мелихова",
+        "first_name": "Р•РІР°-РЎРѕС„РёСЏ",
+        "last_name": "РњРµР»РёС…РѕРІР°",
         "room": "181B"
     }
 },
@@ -12,81 +12,81 @@
     "model": "users.students",
     "pk": 2,
     "fields": {
-        "first_name": "Артём",
-        "last_name": "Хаметов",
-        "room": "109А"
+        "first_name": "РђСЂС‚С‘Рј",
+        "last_name": "РҐР°РјРµС‚РѕРІ",
+        "room": "109Рђ"
     }
 },
 {
     "model": "users.students",
     "pk": 3,
     "fields": {
-        "first_name": "Денис",
-        "last_name": "Яцыник",
-        "room": "59Б"
+        "first_name": "Р”РµРЅРёСЃ",
+        "last_name": "РЇС†С‹РЅРёРє",
+        "room": "59Р‘"
     }
 },
 {
     "model": "users.students",
     "pk": 4,
     "fields": {
-        "first_name": "Даниил",
-        "last_name": "Шмаков",
-        "room": "12А"
+        "first_name": "Р”Р°РЅРёРёР»",
+        "last_name": "РЁРјР°РєРѕРІ",
+        "room": "12Рђ"
     }
 },
 {
     "model": "users.students",
     "pk": 5,
     "fields": {
-        "first_name": "Алена",
-        "last_name": "Милосердова",
-        "room": "182А"
+        "first_name": "РђР»РµРЅР°",
+        "last_name": "РњРёР»РѕСЃРµСЂРґРѕРІР°",
+        "room": "182Рђ"
     }
 },
 {
     "model": "users.students",
     "pk": 6,
     "fields": {
-        "first_name": "Михаил",
-        "last_name": "Иванов",
-        "room": "179А"
+        "first_name": "РњРёС…Р°РёР»",
+        "last_name": "РРІР°РЅРѕРІ",
+        "room": "179Рђ"
     }
 },
 {
     "model": "users.students",
     "pk": 7,
     "fields": {
-        "first_name": "Наталья",
-        "last_name": "Зайцева",
-        "room": "139Б"
+        "first_name": "РќР°С‚Р°Р»СЊСЏ",
+        "last_name": "Р—Р°Р№С†РµРІР°",
+        "room": "139Р‘"
     }
 },
 {
     "model": "users.students",
     "pk": 8,
     "fields": {
-        "first_name": "Полина",
-        "last_name": "Белова",
-        "room": "68В"
+        "first_name": "РџРѕР»РёРЅР°",
+        "last_name": "Р‘РµР»РѕРІР°",
+        "room": "68Р’"
     }
 },
 {
     "model": "users.students",
     "pk": 9,
     "fields": {
-        "first_name": "Феликс",
-        "last_name": "Акопян",
-        "room": "113В"
+        "first_name": "Р¤РµР»РёРєСЃ",
+        "last_name": "РђРєРѕРїСЏРЅ",
+        "room": "113Р’"
     }
 },
 {
     "model": "users.students",
     "pk": 10,
     "fields": {
-        "first_name": "Старцев",
-        "last_name": "Виталий",
-        "room": "179Б"
+        "first_name": "РЎС‚Р°СЂС†РµРІ",
+        "last_name": "Р’РёС‚Р°Р»РёР№",
+        "room": "179Р‘"
     }
 }
 ]
