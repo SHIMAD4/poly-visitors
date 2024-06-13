@@ -30,6 +30,22 @@ button {
     margin-bottom: 15px;
 }
 
+.form-textarea {
+    box-shadow: var(--bs-box-shadow);
+    padding: 1.25rem;
+    border: 1px solid #2e2e2e;
+    border-radius: var(--rounded);
+    margin-bottom: 15px;
+    resize: none;
+}
+
+#responseMessage {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(0%, 0%);
+}
+
 .elem {
     background-color: var(--bg-aside);
     border-radius: var(--rounded);

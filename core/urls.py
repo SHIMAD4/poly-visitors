@@ -4,11 +4,12 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from swagger import urlpatterns as swagger_urls
-from main.views import StatementViewSet, DormitoryViewSet
+from main.views import StatementViewSet, DormitoryViewSet, EmailViewSet
 
-router = routers.SimpleRouter()
+router = routers.DefaultRouter()
 router.register(r"statement", StatementViewSet)
 router.register(r"dormitory", DormitoryViewSet)
+router.register(r"email", EmailViewSet, basename='email')
 
 urlpatterns = (
     [

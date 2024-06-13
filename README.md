@@ -5,11 +5,11 @@
 ## Команды запуска
 Оценка кода по линтеру: 10.00/10
 
-1. Старт проекта `python manage.py runserver`
-2. Старт линтера `pylint ./`
-3. Создать миграции `python manage.py makemigrations`
-4. Применить миграции `python manage.py migrate`
-5. Docker `docker-compose up`
+1. Старт проекта `docker-compose up`
+2. Старт mailhog `docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog`
+2. Старт линтера `docker-compose run pylint`
+3. Создать миграции `docker-compose python manage.py makemigrations`
+4. Применить миграции `docker-compose python manage.py migrate`
 
 ## URL запуска
 

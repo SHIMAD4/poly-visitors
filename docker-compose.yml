@@ -26,6 +26,19 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_HOST: db
-
+  pylint:
+    build: .
+    command: "pylint ./"
+    volumes:
+      - .:/code
+    environment:
+      DJANGO_SETTINGS_MODULE: core.settings
+  mailhog:
+    image: mailhog/mailhog
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - "1025:1025" # smtp server
+      - "8025:8025" # web ui
 volumes:
   postgres_data:

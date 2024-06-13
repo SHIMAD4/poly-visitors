@@ -54,3 +54,10 @@ class VisitHistory(models.Model):
     class Meta:
         verbose_name = "История посещения"
         verbose_name_plural = "История посещений"
+
+
+class Email(models.Model):
+    subject = models.CharField(max_length=100)
+    message = models.TextField()
+    recipient = models.EmailField()
+    sent_at = models.DateTimeField(auto_now_add=True)

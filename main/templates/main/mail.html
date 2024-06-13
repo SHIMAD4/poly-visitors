@@ -1,0 +1,51 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="text-[24px]">Отправка email</h2>
+    <div class="h-[90vh] flex flex-col justify-center items-center">
+        <form class="flex flex-col w-[300px]" action="login" method="post" id="emailForm">
+            <label class="my-2" for="subject">Тема:</label>
+            <input class="form-input" type="text" id="subject" name="subject" required>
+
+            <label class="my-2" for="message">Сообщение:</label>
+            <textarea class="form-textarea" id="message" name="message" required></textarea>
+
+            <label class="my-2" for="recipient">Получатель:</label>
+            <input class="form-input" type="email" id="recipient" name="recipient" required>
+
+            <button class="btn py-[10px] px-[55px] mb-[10px] whitespace-nowrap" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div id="responseMessage"></div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const recipient = document.getElementById('recipient').value;
+
+    fetch('/api/v1/email/send_email/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({ subject: subject, message: message, recipient: recipient })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('responseMessage').textContent = 'Email отправлен успешно!'
+        console.log(data)
+    })
+    .catch(error => {
+        document.getElementById('responseMessage').textContent = 'Произошла ошибка при отправке email.'
+        console.log(error)
+    });
+});
+</script>
+{% endblock %}
