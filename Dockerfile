@@ -8,6 +8,12 @@ ENV PYTHONUNBUFFERED 1
 # Устанавливаем рабочую директорию
 WORKDIR /code
 
+# Устанавливаем системные зависимости и клиент PostgreSQL
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    postgresql-client
+
 # Копируем файл требований
 COPY requirements.txt /code/
 

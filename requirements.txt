@@ -6,3 +6,8 @@ django-rest-framework>=0.1.0
 drf-yasg>=1.20.0
 pylint-django>=2.4.4
 django-import-export>=2.5.0
+celery
+redis
+django-celery-beat
+flower
+postgres

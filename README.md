@@ -3,7 +3,7 @@
 Курсовой проект Python + Django
 
 ## Команды запуска
-Оценка кода по линтеру: 10.00/10
+Оценка кода по линтеру: 9.75/10
 
 1. Старт проекта `docker-compose up`
 2. Старт mailhog `docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog`
@@ -11,11 +11,18 @@
 3. Создать миграции `docker-compose python manage.py makemigrations`
 4. Применить миграции `docker-compose python manage.py migrate`
 
+## Logs
+
+1. Celery `docker-compose logs celery`
+2. Celery-beat `docker-compose logs celery-beat`
+
 ## URL запуска
 
 1. Админ панель `/admin`
 2. Swagger `/swagger`
 3. Redoc `/redoc`
+4. Flower `127.0.0.1:5555`
+5. Mailhog `127.0.0.1:8025`
 
 ## Команды для фикстур
 
