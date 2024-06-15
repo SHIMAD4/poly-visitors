@@ -5,7 +5,7 @@ from celery.schedules import crontab
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 
-app = Celery('Forum_V2')
+app = Celery('poly-visitors')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
